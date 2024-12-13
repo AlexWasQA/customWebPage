@@ -1,0 +1,763 @@
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top:auto;
+    background-color: white;
+    background-image: url('pictures/translucent-image_easy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+        
+  }
+  header{
+    right: 0;
+    overflow: hidden;
+    z-index: 1;
+    
+  }
+  /* Set the header as a flex container */
+  .header-menu {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  
+  }
+  /* Menu buttons on the left */
+  .header-left {
+  display: flex;
+  }
+  .btn-group .button {
+  margin-right: 20px; /* Space between buttons */
+  }
+  .btn-group .button a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  }
+  /* Logos on the right */
+  .header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space similar to the left side buttons */
+  position: absolute;
+  right: 20px;
+  }
+  /* Logo styling */
+  .logo {
+  width: 60px;
+  height: auto;
+  }
+  /* Social icons styling */
+  #social-up {
+  display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the logos */
+  }
+  #insta  {
+  width: 50px;
+  height: 50px;
+  }
+  #Fb{
+  width: 80px;
+  height: 80px;
+  }
+  /* Styling for the menu bar on smaller screens */
+  #menu-bar {
+  display: none; /* This is hidden by default for larger screens */
+  }
+  .navMenu {
+    justify-content: center;
+    height: 60px;
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    height: 60xp;
+    position: absolute;
+    text-decoration: none;
+  }
+  .btn-group .button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #ffcc00 0%, #ffbb00cd 51%, #ffcc00 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+    
+  }     
+  .btn-group .button:hover{
+
+    text-decoration: none;
+    background-position: right center;
+    background-image: -moz-linear-gradient(#c38301 23%, #f3ab2e 27%, #c38301 30%, #c38301 20%);
+    background-image: -webkit-linear-gradient(#c38301 23%, #f3ab2e 27%, #c38301 30%, #c38301 20%);
+    background-image: -o-linear-gradient(#c38301 23%, #f3ab2e 27%, #c38301 30%, #c38301 20%);
+        }    
+  
+  A {
+    color: #ffc107; /* Цвет ссылок */
+   }
+   A:visited {
+    color: #ffc107;
+   }
+   A:hover{
+    color:  #FF8800;
+   }
+  .btn-group a {
+    color:  black;
+  } 
+  .btn-group a:hover{
+    color: #ffc107;
+  }
+  #vidos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  #vidos video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+  }
+  #more img{
+    width:150px; 
+    height: 150px;
+   
+  }
+  .footer-line {
+  width: 50%;
+  text-align: center;
+  }
+  #s-text { /* welcome */
+  font: 3em/1 Arial; 
+  }
+  .text--line {
+  font-size: 2.5em;
+  }  
+  svg {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  height: 60%;
+  margin-top: 60px;
+  }
+  .text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 3px;
+  -webkit-animation: stroke-offset 9s infinite linear;
+  animation: stroke-offset 9s infinite linear;
+  }
+  .text-copy:nth-child(1) {
+  stroke:black;
+  stroke-dashoffset: 7%;
+  }
+  .text-copy:nth-child(2) {
+  stroke: black;
+  stroke-dashoffset: 14%;
+  }
+  .text-copy:nth-child(3) {
+  stroke: black;
+  stroke-dashoffset: 21%;
+  }
+  .text-copy:nth-child(4) {
+  stroke: black;
+  stroke-dashoffset: 28%;
+  }
+  .text-copy:nth-child(5) {
+  stroke: black;
+  stroke-dashoffset: 35%;
+  }
+  @-webkit-keyframes stroke-offset {
+  30% {
+  stroke-dashoffset: 35%;
+  stroke-dasharray: 0 87.5%;
+  }
+  }
+  @keyframes stroke-offset {
+  30% {
+  stroke-dashoffset: 35%;
+  stroke-dasharray: 0 87.5%;
+  }}
+  .footer {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  .footer .logo-row, .footer .social-row, .footer .copyright-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  }
+  .footer .logo-row img, .footer .social-row img {
+  margin: 0 10px;
+  max-width: 150px;
+  }
+  .footer .social-row img {
+  width: 40px;
+  }
+  .footer .copyright-row {
+  font-size: 14px;
+  }
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Items aligned at the left */
+  }
+
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 800px) {
+  body {
+    background-image: url('pictures/translucent-image.png'); /* Ensure the image is the same */
+    background-size: contain; /* Ensures the image fits the width of the mobile screen */
+    background-position: center; /* Adjusts the image to be centered */
+    background-repeat:repeat; /* Ensures it doesn't repeat */
+    background-attachment: fixed; /* The image scrolls with the page */
+  }
+  @media (max-width: 480px) {
+  body {
+      background-size: 100% auto; /* Image will be 100% wide and auto height */
+      background-position: center top; /* Adjust the image to stay centered and aligned at the top */
+      background-repeat: repeat;
+  }
+  }
+  /* Show the menu bar for mobile */
+  #menu-bar {
+      display: block;
+  }
+  
+  .header-left {
+      display: none; /* Hide normal header elements on smaller screens */
+  }
+  .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: absolute;  /* Use absolute positioning to move it to the corner */
+      top: 0 px;           /* Adjust as needed for spacing from the top */
+      right: 0px;         /* Keep it aligned to the right corner */
+  }
+  
+  
+  .nav {
+      display: block; /* Show the mobile nav when triggered */
+  }
+  }
+  .call-button, .email-button {
+  margin-top: 20px;
+  width: 130px;
+  height: 40px;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  margin-right: auto;
+     
+}
+.btn-an{
+    background-color: #f0ecfc;
+background-image: linear-gradient(315deg,hwb(45 39% 4%) 0%,  #ffc107 74%);
+  line-height: 42px;
+  padding-top: 40px;
+  border: none;
+}
+.btn-an span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+        
+     }
+
+.btn-an:before, .btn-an:after
+ {
+    position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #ffc107;
+  /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+  transition: all 0.3s ease;
+}
+
+.btn-an:before{
+    height: 0%;
+    width: 2px;
+}
+
+.btn-an:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-an:hover:before{
+    height: 100%;
+}
+
+.btn-an:hover:after {
+    width: 100%;
+}
+
+.btn-an:hover {
+    background: black;
+    color: #FFC107;
+}
+
+.call-button span:hover, .email-button span:hover {
+    color:  #ffc107;
+}
+
+.call-button span:before, .call-button span:after,
+.email-button span:before, .email-button span:after {
+    position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background:  #ffc107;
+  /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+  transition: all 0.3s ease;
+}
+
+.call-button span:before, .email-button span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.call-button span:after, .email-button span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.call-button span:hover:before, .email-button span:hover:before {
+    height: 100%;
+}
+
+.call-button span:hover:after, .email-button span:hover:after {
+    width: 100%;
+}
+
+
+  .contacts, .map {
+    flex: 1; /* This will make both divs take up equal space */
+    min-width: 300px; /* Set a minimum width to prevent them from getting too small */
+    padding: 25px; /* Optional padding for spacing inside the columns */
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .footer-item {
+    display: flex;
+    align-items: center;
+  }
+  .contacts{
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+  .contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  }
+  
+  .contact-item {
+    flex-direction: row;
+    justify-content: center;      
+    gap: 10px;
+    background-color: #FFC107;
+    font-size: 24px;
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap; /* Prevent text wrapping */
+    cursor: pointer;
+  }
+  
+  .contact-item img {
+    width: 24px; /* Adjust the size of the icons as needed */
+    height: 24px; /* Adjust the size of the icons as needed */
+  }
+  
+  .phone-number {
+    display: none; /* Hide the phone number by default */
+  }
+  
+  .social-row {
+    background-color: #FFC107;    
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+  }
+  
+  .social-row a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-row img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-row img.facebook {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .services-section, .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .service-box {
+    flex: 1 1 48%;
+    box-sizing: border-box;
+    width: 30%;
+    background-color: #ffc107;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-box h2 {
+    color: black;
+    margin-bottom: 10px;
+   
+  }
+  
+  .service-box p {
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .service-box a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .quote-section {
+    background-color: #3a3a3a;
+    color: #ffc107;
+    text-align: center;
+    padding: 20px 0;
+    font-style: italic;
+    position: relative;
+  }
+  
+  .quote-section span {
+    display: inline;
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Patrick Hand'; /* Handwriting font */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide the overflowing text */
+    width: 0; /* Initially hide the text */
+    animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite; /* Animation for typing effect */
+  }
+  
+ 
+  #can p, #use p, #about_text p, #contact p, #knife p {
+    text-indent: 5%;
+    font-size: 30px;
+    font-style: bold;
+    text-align: justify;
+    padding: 5px;
+  }
+  #about h2, #can h2, #use h2, #contact h2, #knife h2{
+    padding-top: 100px;
+    margin-top: 60px;
+    overflow-wrap: break-word;
+    position: relative;
+    text-align: center;
+    width: 100%; 
+    color:  #ffc107;
+    font-size: 35px;
+    text-shadow: 1px 1px 1px #0d0d0d;
+    width: 100%;
+    font-style: italic;
+    overflow:hidden;
+    }
+  #about h3{
+    text-align: center;
+    font-size: 30px;
+    }
+  #about_text p{
+    text-indent: 5%;
+    font-size: 30px;
+    font-style: bold;
+    margin: 20px 0;
+    }
+  
+
+ 
+  @media  (max-width: 800px)  {
+    header{
+      position: fixed;
+      background-color: black;
+    }
+    body {
+      background-attachment: fixed;
+    
+  }
+  
+    #menuB{
+      display: none;
+    }
+    #menu {
+    z-index: 2;
+  }
+  .text--line2{
+    display: none;
+  }
+  #menu-bar {
+    width: 45px;
+    height: 40px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+  }
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: #ebae07;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  #bar3 {
+    transform: translateY(4px);
+  }
+  .nav {
+    transition: 0.3s ease;
+    display: none;
+  }
+  .nav ul {
+    padding: 0 22px;
+    line-height: 0.75;
+  }
+  .nav li {
+    list-style: none;
+    padding: 12px 0;
+  }
+  .nav li a {
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+  }
+  .nav li a:hover {
+    font-weight: bold;
+  }
+  .menu-bg,
+  #menu {
+    top: 0;
+    left: 0;
+    position: fixed;
+  }
+  .menu-bg {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(ellipse,#FFFF00, #FF8800);
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+  .change {
+    display: block;
+  }
+  .change .bar {
+    background-color:black;
+  }
+  .change #bar1 {
+    transform: translateY(6px) rotateZ(-45deg);
+  }
+  .change #bar2 {
+    opacity: 0;
+  }
+  .change #bar3 {
+    transform: translateY(-4px) rotateZ(45deg);
+  }
+  .change-bg {
+    width: 480px;
+    height: 420px;
+    transform: translate(-60%, -30%);
+  }
+  #vidos{
+    width: 100%;
+    height: 100%; 
+  }
+  
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .map iframe {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Footer styles */
+  .footer .logo-row, .footer .social-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer .logo-row img, .footer  {
+    margin-bottom: 10px;
+  }
+  
+  .footer .copyright-row {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .service-box h2 {
+    color: black;
+    margin-bottom: 5px;
+    size-adjust: 90%;
+  }
+  .services-section{
+    align-items: baseline;
+  }
+  .contacts .call-button, .contacts .email-button {
+    width: 350px; /* Make buttons smaller if needed */
+    height: 200px;
+    
+          display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;  /* Increase font size */
+    font-weight: bold;  /* Make the text bold if needed */
+    color: black;  /* Text color */
+    width: 100%;  /* Full width for button */
+    height: 100%;  /* Full height for button */
+    text-align: center;  /* Center the text */
+   
+}
+
+.map {
+    width: 100%; /* Ensure map takes full width */
+    height: auto;
+}
+  .contacts, .map{
+    flex-direction: column; /* Set them in a single row */
+    justify-content: space-around; /* Space out evenly */
+    align-items: center; /* Align items vertically */
+    flex-wrap: nowrap; /* Ensure no wrapping */
+          
+          
+          
+          
+  }
+  
+  .contact-item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 30%; /* Adjust the percentage as needed to fit your design */
+    white-space: nowrap;
+    justify-content: center;
+  
+  }
+  .social-row {
+  flex: 1 1 100%; /* Ensure it stays in its own row */
+  }
+  .phone-number {
+    display: inline; /* Show the phone number on small screens */
+  }
+  .copyright-row{
+    justify-content: center;
+    text-align: center;
+    text-decoration: white;
+  }
+  }
+  
+  
+  
+  @media (min-width : 800px){
+    #menu{
+      display: none;
+    }
+    header{
+      background-color: black;
+    }
+    #menuB{
+      position: fixed;
+    }
+    .container {
+        flex-direction: row;
+    }
+    .map {
+        width: 100%;
+            
+    }
+    .map iframe {
+        height: 450px; /* Adjust as needed */
+    }
+    
+    .services-section{
+       justify-self: start;
+    }
+            
+    .call-button, .email-button {
+        font-size: 50px; /* Larger font size on bigger screens */
+        padding: 70px 150px;
+        margin-left: 80px;
+        margin-right: auto;
+        width: 100%; /* Adjust width on larger screens */
+
+    }
+    }
